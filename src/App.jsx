@@ -1,17 +1,18 @@
 import { useState } from "react";
+import { Route, Routes, Link, Navigate } from "react-router-dom";
+import axios from "axios";
+import Landing from "./components/Landing";
+import AdvicePage from './components/AdvicePage'
 
-function Landing() {
-  const [count, setCount] = useState(0);
-
+function App() {
   return (
     <>
-      <div className="bg-bodyColor w-screen h-screen flex justify-center items-center">
-      <div id="container" className="bg-containerColor rounded-container w-container h-container">
-        
-      </div>
-      </div>
+      <Routes>
+        <Route path='/' element={<Landing/>}/>
+        <Route path='/advice' element={<AdvicePage/>}/>
+      </Routes>
     </>
   );
 }
 
-export default Landing;
+export default App;

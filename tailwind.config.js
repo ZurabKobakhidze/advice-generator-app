@@ -2,6 +2,9 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    fontFamily: {
+      manrope: ["Manrope", "sans-serif"],
+    },
     extend: {
       colors: {
         bodyColor: "#202733",
@@ -10,13 +13,13 @@ export default {
         spanColor: "#CEE3E9",
       },
       borderRadius: {
-        'container': '10px',
+        container: "10px",
       },
       width: {
-        'container': '343px',
+        container: "343px",
       },
       height: {
-        'container': '315px',
+        container: "315px",
       },
     },
   },

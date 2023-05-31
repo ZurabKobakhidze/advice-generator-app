@@ -1,17 +1,22 @@
-import React from 'react';
-import { Route, Routes, Link} from 'react-router-dom'
+import React from "react";
+import { Route, Routes, Link } from "react-router-dom";
+import axios from "axios";
 
-
-function App() {
-    const [count, setCount] = useState(0);
-  
-    return (
-      <>
-        <div className="bg-bodyColor w-screen h-screen flex justify-center items-center">
-        <div id="container" className="bg-containerColor rounded-container w-container h-container"></div>
+function Landing() {
+  return (
+    <>
+      <div className="bg-bodyColor w-screen h-screen flex justify-center items-center">
+        <div
+          id="container"
+          className="bg-containerColor rounded-container w-container h-container"
+        >
+          <button className="adviceButton">
+            <Link to="/advice">Need an Advice?</Link>
+          </button>
         </div>
-      </>
-    );
-  }
-  
-  export default App;
+      </div>
+    </>
+  );
+}
+
+export default Landing;
