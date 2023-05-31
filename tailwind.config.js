@@ -21,6 +21,14 @@ export default {
       height: {
         container: "315px",
       },
+      boxShadow: {
+        'green': '0px 0px 40px #53FFAA',
+      }
+    },
+  },
+  variants: {
+    extend: {
+      boxShadow: ['hover'],
     },
   },
   plugins: [],
