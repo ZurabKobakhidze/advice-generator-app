@@ -26,10 +26,6 @@ export default {
       }
     },
   },
-  variants: {
-    extend: {
-      boxShadow: ['hover'],
-    },
-  },
+  
   plugins: [],
 };
