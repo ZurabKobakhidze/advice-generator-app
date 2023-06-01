@@ -3,7 +3,7 @@ import { Route, Routes, Link } from "react-router-dom";
 
 
 
-function Landing() {
+function Landings() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -29,4 +29,4 @@ function Landing() {
   );
 }
 
-export default Landing;
+export default Landings;
