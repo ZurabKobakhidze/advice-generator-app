@@ -11,6 +11,14 @@ export default {
         containerColor: "#313A48",
         adviceColor: "#53FFAA",
         spanColor: "#CEE3E9",
+        customblue: '#9da5c5',
+
+      },
+      borderWidth: {
+        '1': '2px',
+      },
+      screens: {
+        'desktop' : '1440px',
       },
       borderRadius: {
         container: "10px",

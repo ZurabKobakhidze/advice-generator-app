@@ -5,39 +5,38 @@ import iconButton from "../assets/icon-dice.svg";
 
 function AdvicePage() {
   const [advice, setAdvice] = useState("");
-const [adviceId, setAdviceId] = useState("");
+  const [adviceId, setAdviceId] = useState("");
 
-const getAdvice = () => {
-  axios
-    .get("https://api.adviceslip.com/advice")
-    .then((response) => {
-      
-      setAdvice(response.data.slip.advice);
-      setAdviceId(response.data.slip.id);
-    })
-    .catch((error) => {
-      console.error(error);
-    });
-};
+  const getAdvice = () => {
+    axios
+      .get("https://api.adviceslip.com/advice")
+      .then((response) => {
+        setAdvice(response.data.slip.advice);
+        setAdviceId(response.data.slip.id);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
 
-useEffect(() => {
-  getAdvice();
-}, []);
+  useEffect(() => {
+    getAdvice();
+  }, []);
 
   return (
     <>
       <div className="bg-bodyColor w-screen h-screen flex flex-col items-center justify-center">
         <div
           id="container_2"
-          className="bg-containerColor rounded-container w-container  pt-10 pl-6 pr-6 flex flex-col items-center pb-16 shadow-lg"
+          className="bg-containerColor rounded-container w-container  pt-10 pl-6 pr-6 flex flex-col items-center pb-16 shadow-lg desktop:w-[540px] desktop:pt-12 desktop:pr-12 desktop:pl-12 desktop:pb-15"
         >
-          <h2 className=" font-manrope  font-style: normal; text-[11px] font-extrabold text-adviceColor tracking-[3.45714px]">
+          <h2 className=" font-manrope  font-style: normal; text-[11px] leading-[15px] font-extrabold text-adviceColor tracking-[3.45714px] desktop:text-[13px] desktop:leading-[18px]">
             ADVICE #{adviceId}
           </h2>
           <h1 className="font-manrope  font-style: normal; text-[24px] font-extrabold text-spanColor tracking-[-0.257143px] leading-[33px] mt-6">
             {advice}
           </h1>
-          <img className="mt-6" src={pattern} alt="Pattern Divider" />
+          <img className="mt-6 desktop:w-full" src={pattern} alt="Pattern Divider" />
         </div>
         <button
           id="button"
